@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-struct Paises {
+struct coleccionDePaises {
     
     let paises = [
     "MEXICO",
@@ -35,7 +35,7 @@ struct Paises {
     "NORUEGA"
     ]
     
-    func regresaPaisAleatorio() ->String {
+    func obtenPais() ->String {
         let posicion = Int (arc4random()) % paises.count
         return paises[posicion]
     }
@@ -43,7 +43,7 @@ struct Paises {
 }
 
 
-struct Hamburguesas {
+struct coleccionDeHamburguesas {
     
     let hamburguesas = [
         "SENCILLA",
@@ -68,7 +68,7 @@ struct Hamburguesas {
         "DOBLE CON QUESO Y CHORIZO"
     ]
     
-    func regresaPaisAleatorio() ->String {
+    func obtenHamburguesa() ->String {
         let posicion = Int (arc4random()) % hamburguesas.count
         return hamburguesas[posicion]
     }
@@ -87,7 +87,7 @@ struct Colores {
     ]
     
     
-    func regresaColorAleatorio() ->UIColor {
+    func colorAleatorio() ->UIColor {
         let posicion = Int (arc4random()) % Colores.count
         return Colores[posicion]
     }

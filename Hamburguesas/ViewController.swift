@@ -11,10 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var cambiaPais: UILabel!
+    let coloresPais = Colores()
+    let pais = coleccionDePaises()
     
     
     @IBOutlet weak var cambiaHamburguesa: UILabel!
-    
+    let coloresHamburguesa = Colores()
+    let hamburguesa = coleccionDeHamburguesas()
     
     
     override func viewDidLoad() {
@@ -28,6 +31,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func quieroHamburguesa() {
+        view.backgroundColor = colorAleatorio
+        view.tintColor = colorAleatorio
+        
+        cambiaPais.text = coleccionDePaises.obtenPais()
+        cambiaHamburguesa.text = coleccionDeHamburguesas.obtenHamburguesa()
         
 
         
